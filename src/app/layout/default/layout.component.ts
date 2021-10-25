@@ -56,7 +56,7 @@ export class LayoutComponent implements OnInit, OnDestroy {
         },
         {
           name: 'Offers',
-          url: '/app/dashboard/analytics',
+          url: '/app/offers/offer-list',
           prefix: {
             type: 'ibm-icon',
             name: 'activity',

@@ -20,7 +20,8 @@
             </div>
             <p class="app-body-short-01 mb-8">Find requests that you can provide for and send a good offer to take the job!</p>
             <div fxLayout="row">
-              <ng-container *ngFor="let video of videos;trackBy:trackByFn">
+              <ng-container *ngFor="let video of videos; index as j;trackBy:trackByFn">
+                <div class="clearfix" *ngIf="j % 3 === 0"></div>
                 <div fxFlex="350px" class="mr-4">
                   <div class="app-card app-card--m-0">
                     <div class="app-card__content app-border-b flex justify-between">

@@ -20,7 +20,7 @@ export class RequestListComponent implements OnInit {
     {
       title: 'My house need to be painted',
       category: 'Paint',
-      url: 'https://www.youtube.com/watch?v=nP2vtDLTAgM',
+      url: 'https://www.youtube.com/embed/nP2vtDLTAgM',
       seen: true,
       posted: '4 hours ago',
       info: ' I need to paint all my house. I am searching for a painter who can paint my house with reasonable price.',
@@ -28,7 +28,7 @@ export class RequestListComponent implements OnInit {
     {
       title: 'I need a car for rent',
       category: 'Vehicle rent',
-      url: 'https://www.youtube.com/watch?v=ltnwCB8fgnU',
+      url: 'https://www.youtube.com/embed/G6LigiflRzw',
       seen: true,
       posted: '2 hours ago',
       info: 'I want to rent a car for 2 days',
@@ -36,7 +36,7 @@ export class RequestListComponent implements OnInit {
     {
       title: 'My bathroom need to be renovated',
       category: 'Plumbing',
-      url: 'https://www.youtube.com/embed/N7EcNIBlW64',
+      url: 'https://www.youtube.com/embed/FYq6vM1lAEk',
       seen: true,
       posted: '1 hours ago',
       info: 'My bathroom is very old and I want to change all its pipeline so I need a professional plumber',
