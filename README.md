@@ -35,10 +35,19 @@ When you are on master branch then do the below commands:
 
 In order to change the code please first create a branch (look at the hints inside brackets. Do not use brackets):
 ```bash
-git branch [JiraTaskID]-[title-of-the-task-separated-by-dash]
+git branch [YourName]/[JiraTaskID]-[title-of-the-task-separated-by-dash]
 ```
+Sample:
 ```bash
-git checkout [JiraTaskID]-[title-of-the-task-separated-by-dash]
+git branch Anahita//LSM-51-offer-list
+```
+
+```bash
+git checkout [YourName]/[JiraTaskID]-[title-of-the-task-separated-by-dash]
+```
+Sample:
+```bash
+git checkout Anahita//LSM-51-offer-list
 ```
 
 
