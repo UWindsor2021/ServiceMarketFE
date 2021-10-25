@@ -60,6 +60,7 @@ import {StarterApplicationBasicComponent} from "./starters/application/starter-a
 import {StarterApplicationAdvancedComponent} from "./starters/application/starter-application-advanced/starter-application-advanced.component"
 import {StarterApplicationComplexComponent} from "./starters/application/starter-application-complex/starter-application-complex.component"
 import {RequestListComponent} from "./business/service-provider/requests/request-list/request-list.component";
+import {OfferListComponent} from "./business/service-provider/offers/offer-list/offer-list.component";
 
 const starterPages = [
   {
@@ -499,6 +500,22 @@ const routeForPages = [
         component: RequestListComponent,
         data: {
           breadcrumb: 'Request List'
+        },
+      },
+    ]
+  },
+  {
+    path: 'offers',
+    component: OfferListComponent,
+    data: {
+      breadcrumb: 'Offers'
+    },
+    children: [
+      {
+        path: 'offer-list',
+        component: OfferListComponent,
+        data: {
+          breadcrumb: 'Offer List'
         },
       },
     ]

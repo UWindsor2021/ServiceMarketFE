@@ -74,6 +74,7 @@ import { StarterApplicationBasicComponent } from './starters/application/starter
 import { StarterApplicationAdvancedComponent } from './starters/application/starter-application-advanced/starter-application-advanced.component';
 import { StarterApplicationComplexComponent } from './starters/application/starter-application-complex/starter-application-complex.component'
 import {RequestListComponent} from "./business/service-provider/requests/request-list/request-list.component";
+import {OfferListComponent} from "./business/service-provider/offers/offer-list/offer-list.component";
 
 @NgModule({
   declarations: [
@@ -93,6 +94,7 @@ import {RequestListComponent} from "./business/service-provider/requests/request
     UserCreditcardComponent,
     UserTransactionsComponent,
     RequestListComponent,
+    OfferListComponent,
 
     TimelineComponent,
     ProfileComponent,
