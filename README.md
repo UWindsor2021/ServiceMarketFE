@@ -39,7 +39,7 @@ git branch [YourName]/[JiraTaskID]-[title-of-the-task-separated-by-dash]
 ```
 Sample:
 ```bash
-git branch Anahita//LSM-51-offer-list
+git branch Anahita/LSM-51-offer-list
 ```
 
 ```bash
@@ -47,7 +47,7 @@ git checkout [YourName]/[JiraTaskID]-[title-of-the-task-separated-by-dash]
 ```
 Sample:
 ```bash
-git checkout Anahita//LSM-51-offer-list
+git checkout Anahita/LSM-51-offer-list
 ```
 
 
