@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DashboardCryptoComponent } from './dashboard-crypto.component';
 
-describe('DashboardCryptoComponent', () => {
+describe('GettingStartedComponent', () => {
   let component: DashboardCryptoComponent;
   let fixture: ComponentFixture<DashboardCryptoComponent>;
 
