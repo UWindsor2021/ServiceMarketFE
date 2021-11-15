@@ -61,6 +61,8 @@ import {StarterApplicationAdvancedComponent} from "./starters/application/starte
 import {StarterApplicationComplexComponent} from "./starters/application/starter-application-complex/starter-application-complex.component"
 import {RequestListComponent} from "./business/service-provider/requests/request-list/request-list.component";
 import {OfferListComponent} from "./business/service-provider/offers/offer-list/offer-list.component";
+import { ReviewListComponent } from "./business/service-provider/review/review-list/review-list.component";
+import { ServiceListComponent } from "./business/service-provider/services/service-list/service-list.component";
 
 const starterPages = [
   {
@@ -516,6 +518,38 @@ const routeForPages = [
         component: OfferListComponent,
         data: {
           breadcrumb: 'Offer List'
+        },
+      },
+    ]
+  },
+  {
+    path: 'review',
+    component: ReviewListComponent,
+    data: {
+      breadcrumb: 'review'
+    },
+    children: [
+      {
+        path: 'review-list',
+        component: ReviewListComponent,
+        data: {
+          breadcrumb: 'review List'
+        },
+      },
+    ]
+  },
+  {
+    path: 'services',
+    component: ServiceListComponent,
+    data: {
+      breadcrumb: 'services'
+    },
+    children: [
+      {
+        path: 'service-list',
+        component: ServiceListComponent,
+        data: {
+          breadcrumb: 'service List'
         },
       },
     ]
