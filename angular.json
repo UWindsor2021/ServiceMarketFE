@@ -40,7 +40,9 @@
               },
               "src/@youpez/styles/scss/theme/app.scss",
               "src/app/shared/styles/app.themes.scss",
-              "src/assets/tailwind/tailwind.css"
+              "src/assets/tailwind/tailwind.css",
+              "node_modules/devextreme/dist/css/dx.common.css",
+              "node_modules/devextreme/dist/css/dx.light.css"
             ],
             "scripts": []
           },

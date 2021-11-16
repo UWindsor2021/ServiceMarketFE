@@ -1,11 +1,14 @@
 import { Component, OnInit } from '@angular/core'
+import { Service, Employee } from './app.service';
 
 @Component({
   selector: 'app-review-list',
   templateUrl: './review-list.component.html',
+  providers: [Service],
 //  styleUrls: ['./review-list.component.css']
 })
 export class ReviewListComponent implements OnInit {
+  employees: Employee[];
 
   public channels = [
     {
@@ -276,7 +279,8 @@ export class ReviewListComponent implements OnInit {
 
   public leftSidebarVisibility: boolean = true
 
-  constructor() {
+  constructor(service: Service) {
+    this.employees = service.getEmployees();
   }
 
   ngOnInit(): void {

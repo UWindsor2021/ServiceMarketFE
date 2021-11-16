@@ -42,6 +42,8 @@
     "angular-resizable-element": "^3.3.4",
     "carbon-components": "^10.26.0",
     "carbon-components-angular": "^4.36.1",
+    "devextreme": "21.2.3",
+    "devextreme-angular": "21.2.3",
     "echarts": "^4.9.0",
     "lodash": "^4.17.20",
     "ngx-mask": "^11.1.4",
