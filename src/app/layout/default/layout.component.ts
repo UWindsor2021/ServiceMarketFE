@@ -64,7 +64,7 @@ export class LayoutComponent implements OnInit, OnDestroy {
         },
         {
           name: 'Services',
-          url: '/app/dashboard/analytics',
+          url: '/app/services/service-list',
           prefix: {
             type: 'ibm-icon',
             name: 'activity',
@@ -72,7 +72,7 @@ export class LayoutComponent implements OnInit, OnDestroy {
         },
         {
           name: 'Customer Reviews',
-          url: '/app/dashboard/crypto',
+          url: '/app/review/review-list',
           prefix: {
             type: 'ibm-icon',
             name: 'analytics',
@@ -102,7 +102,7 @@ export class LayoutComponent implements OnInit, OnDestroy {
         },
         {
           name: 'Requests',
-          url: '/app/dashboard/analytics',
+          url: '/app/requests/request-list',
           prefix: {
             type: 'ibm-icon',
             name: 'activity',

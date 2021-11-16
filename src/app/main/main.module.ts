@@ -1,4 +1,4 @@
-import {NgModule} from '@angular/core'
+import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core'
 import {CommonModule} from '@angular/common'
 
 import {SharedModule} from "../shared/shared.module"
@@ -75,8 +75,50 @@ import { StarterApplicationAdvancedComponent } from './starters/application/star
 import { StarterApplicationComplexComponent } from './starters/application/starter-application-complex/starter-application-complex.component'
 import {RequestListComponent} from "./business/service-provider/requests/request-list/request-list.component";
 import {OfferListComponent} from "./business/service-provider/offers/offer-list/offer-list.component";
+import { DevExtremeModule, DxAccordionModule, DxAutocompleteModule, DxButtonModule, DxChartModule, DxCheckBoxModule, DxCircularGaugeModule, DxContextMenuModule, DxDataGridComponent, DxDataGridModule, DxDateBoxModule, DxDropDownBoxModule, DxFormModule, DxListModule, DxLoadIndicatorModule, DxNumberBoxModule, DxPivotGridFieldChooserModule, DxPivotGridModule, DxPopoverModule, DxPopupModule, DxRadioGroupModule, DxResponsiveBoxModule, DxScrollViewModule, DxSelectBoxModule, DxSwitchModule, DxTabsModule, DxTemplateModule, DxTextAreaModule, DxTextBoxModule, DxTooltipModule, DxValidationSummaryModule, DxValidatorModule } from 'devextreme-angular'
+import { ReviewListComponent } from './business/service-provider/review/review-list/review-list.component'
+import { ServiceListComponent } from './business/service-provider/services/service-list/service-list.component'
 
+const ApplicationComponents = [
+  ReviewListComponent,
+  ServiceListComponent,
+];
+
+const DevExtremeModules = [
+  DxDataGridModule,
+  DxTabsModule,
+  DxCircularGaugeModule,
+  DxAccordionModule,
+  DxPivotGridModule,
+  DxButtonModule,
+  DxCheckBoxModule,
+  DxRadioGroupModule,
+  DxSelectBoxModule,
+  DxPivotGridFieldChooserModule,
+  DxPopupModule,
+  DxAutocompleteModule,
+  DxTemplateModule,
+  DxValidatorModule,
+  DxValidationSummaryModule,
+  DxLoadIndicatorModule,
+  DxTextAreaModule,
+  DxTextBoxModule,
+  DxDateBoxModule,
+  DxResponsiveBoxModule,
+  DxSwitchModule,
+  DxDropDownBoxModule,
+  DxFormModule,
+  DxScrollViewModule,
+  DxContextMenuModule,
+  DxListModule,
+  DxChartModule,
+  DxNumberBoxModule,
+  DevExtremeModule,
+  DxPopoverModule,
+  DxTooltipModule,
+];
 @NgModule({
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   declarations: [
     TypographyComponent,
     WidgetsGeneralComponent,
@@ -147,6 +189,8 @@ import {OfferListComponent} from "./business/service-provider/offers/offer-list/
     StarterApplicationBasicComponent,
     StarterApplicationAdvancedComponent,
     StarterApplicationComplexComponent,
+
+    ...ApplicationComponents
   ],
   imports: [
     CommonModule,
@@ -155,7 +199,9 @@ import {OfferListComponent} from "./business/service-provider/offers/offer-list/
     SharedModule,
     ChartsModule,
     AgGridModule.withComponents([]),
-  ]
+    ...DevExtremeModules
+  ],
+  exports: [DevExtremeModules]
 })
 export class MainModule {
 }
