@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+        <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
+        <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+
+        <script>
+          const userDataArray = (function () {
+            const url = new URL(location.href);
+            const dataString = url.searchParams.get('l');
+            const dataArray = dataString.split('|');
+            return dataArray.map(p => {
+              const d = p.split(',');
+              return { lat: d[0], lng: d[1], title: [2] };
+            });
+          })();
+
+          const outputHtml = userDataArray.map(p => {
+            return `
+            <a-image
+                src="/assets/asset.png"
+                look-at="[gps-camera]"
+                scale="1 1 1"
+                gps-entity-place="latitude: ${p.lat}; longitude: ${p.lng};"
+            ></a-image>
+            `;
+
+          }).join('');
+        </script>
+    </head>
+
+    <body style="margin: 0; overflow: hidden;">
+        <a-scene
+            embedded
+            loading-screen="enabled: false;"
+            arjs="sourceType: webcam; debugUIEnabled: false;"
+        >
+                <script>
+                  document.write(outputHtml);
+                </script>
+                <!--<a-image
+                    src="/assets/asset.png"
+                    look-at="[gps-camera]"
+                    scale="1 1 1"
+                    gps-entity-place="latitude: 42.30414398308247; longitude: -83.07402776565142;"
+                ></a-image>
+                <a-image
+                    src="/assets/asset.png"
+                    look-at="[gps-camera]"
+                    scale="1 1 1"
+                    gps-entity-place="latitude: 42.30411224364045; longitude: -83.07396339263506;"
+                ></a-image>
+                <a-image
+                    src="/assets/asset.png"
+                    look-at="[gps-camera]"
+                    scale="1 1 1"
+                    gps-entity-place="latitude: 42.304076536749086; longitude: -83.07393657054492;"
+                ></a-image>
+                <a-image
+                    src="/assets/asset.png"
+                    look-at="[gps-camera]"
+                    scale="1 1 1"
+                    gps-entity-place="latitude: 42.30395751363155; longitude: -83.0739687570531;"
+                ></a-image>
+                <a-image
+                    src="/assets/asset.png"
+                    look-at="[gps-camera]"
+                    scale="1 1 1"
+                    gps-entity-place="latitude: 42.30396544851304; longitude: -83.07416187610217;"
+                ></a-image>
+                <a-image
+                    src="/assets/asset.png"
+                    look-at="[gps-camera]"
+                    scale="1 1 1"
+                    gps-entity-place="latitude: 42.304167787653455; longitude: -83.0742584356267;"
+                ></a-image>
+                <a-image
+                    src="/assets/asset.png"
+                    look-at="[gps-camera]"
+                    scale="1 1 1"
+                    gps-entity-place="latitude: 42.30472322508835; longitude: -83.07399021472521;"
+                ></a-image>
+                <a-image
+                    src="/assets/asset.png"
+                    look-at="[gps-camera]"
+                    scale="1 1 1"
+                    gps-entity-place="latitude: 42.304711322908986; longitude: -83.07434426631518;"
+                ></a-image>
+                <a-image
+                    src="/assets/asset.png"
+                    look-at="[gps-camera]"
+                    scale="1 1 1"
+                    gps-entity-place="latitude: 42.30442566992907; longitude: -83.07432280864306;"
+                ></a-image>-->
+
+            <a-camera gps-camera rotation-reader></a-camera>
+        </a-scene>
+    </body>
+</html>

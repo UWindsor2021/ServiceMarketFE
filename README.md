@@ -15,7 +15,7 @@ npm install
 And to run the project:
 
 ```bash
-npm start
+npm run start
 ```
 
 After compilation is done please check the Url below:

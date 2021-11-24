@@ -25,7 +25,13 @@
             "aot": true,
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/app/main/ar/index.html",
+              {
+                "glob": "index.html",
+                "input": "src/app/main/ar/",
+                "output": "/map/"
+              }
             ],
             "styles": [
               {

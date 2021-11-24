@@ -1,3 +1,16 @@
+<youpez-header>
+  <youpez-header-title>
+    Request List
+  </youpez-header-title>
+  <youpez-header-tools>
+    <a href="/map/index.html{{getMapParams(videos)}}" target="_blank">
+      <button ibmButton="primary" size="sm">
+        Show on Map
+        <svg class="bx--btn__icon" ibmIconCheckmarkOutline size="20"></svg>
+      </button>
+    </a>
+  </youpez-header-tools>
+</youpez-header>
 <div fxFill fxLayout="row wrap" fxLayoutAlign="center start">
   <div fxFlex="100%" fxFlex.gt-md="80%" fxFlexOffset.gt-md="20%" fxFlex.gt-lg="90%" fxFlexOffset.gt-lg="10%"
        class="relative h-full">
@@ -59,9 +72,11 @@
                       <div class="app-body-short-01">{{video.info}}</div>
                     </div>
                   </div>
-                  <div> <button ibmButton="ghost" size="field" class="mr-1">
-                    Assign to me
-                  </button></div>
+                  <div>
+                    <button ibmButton="ghost" size="field" class="mr-1">
+                      Assign to me
+                    </button>
+                  </div>
                 </div>
               </ng-container>
             </div>

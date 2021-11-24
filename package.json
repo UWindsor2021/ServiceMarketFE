@@ -3,13 +3,13 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --host 0.0.0.0 --ssl",
     "start-st": "node ./node_modules/@angular/cli/bin/ng serve",
     "build": "node --max_old_space_size=8000 ./node_modules/@angular/cli/bin/ng build --prod",
     "test": "node ./node_modules/@angular/cli/bin/ng test",
     "lint": "node ./node_modules/@angular/cli/bin/ng lint",
     "e2e": "node ./node_modules/@angular/cli/bin/ng e2e",
-    "hmr": "ng serve --hmr -o"
+    "hmr": "ng serve --hmr -o --host 0.0.0.0 --ssl"
   },
   "private": true,
   "dependencies": {

@@ -899,7 +899,7 @@ export class LayoutComponent implements OnInit, OnDestroy {
 
   constructor(private settingsService: SettingsService,
               private appMenuService: AppMenuService) {
-      this.menu = [...this.menu, ...this.menuBase]
+      this.menu = [...this.menu]
   }
 
   ngOnInit(): void {
