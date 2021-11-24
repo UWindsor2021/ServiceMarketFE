@@ -14,7 +14,7 @@ export class RequestListComponent implements OnInit {
       category: 'Plumbing',
       url: 'https://www.youtube.com/embed/N7EcNIBlW64',
       seen: true,
-      location: '42.3046645713217,-83.07461494982917',
+      location: '42.304001882853974,-83.074066335847',
       posted: '2 hours ago',
       info: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id tincidunt dui. Maecenas elementum eros id imperdiet molestie. Vestibulum semper tempus turpis.',
     },
