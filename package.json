@@ -46,6 +46,7 @@
     "devextreme-angular": "21.2.3",
     "echarts": "^4.9.0",
     "lodash": "^4.17.20",
+    "moment": "^2.29.1",
     "ngx-mask": "^11.1.4",
     "ngx-md": "^8.1.6",
     "ngx-router-animations": "0.0.9",

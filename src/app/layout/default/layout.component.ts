@@ -51,7 +51,7 @@ export class LayoutComponent implements OnInit, OnDestroy {
           suffix: {
             type: 'badge',
             level: 'default',
-            text: '34',
+            text: '5',
           },
         },
         {
@@ -60,6 +60,11 @@ export class LayoutComponent implements OnInit, OnDestroy {
           prefix: {
             type: 'ibm-icon',
             name: 'activity',
+          },
+          suffix: {
+            type: 'badge',
+            level: 'default',
+            text: '5',
           },
         },
         {
@@ -107,6 +112,11 @@ export class LayoutComponent implements OnInit, OnDestroy {
             type: 'ibm-icon',
             name: 'activity',
           },
+          suffix: {
+            type: 'badge',
+            level: 'default',
+            text: '5',
+          },
         },
         {
           name: 'Offers',
@@ -114,6 +124,11 @@ export class LayoutComponent implements OnInit, OnDestroy {
           prefix: {
             type: 'ibm-icon',
             name: 'analytics',
+          },
+          suffix: {
+            type: 'badge',
+            level: 'default',
+            text: '4',
           },
         },
         {

@@ -6,7 +6,6 @@
     <a href="/map/index.html{{getMapParams(videos)}}" target="_blank">
       <button ibmButton="primary" size="sm">
         Show on Map
-        <svg class="bx--btn__icon" ibmIconCheckmarkOutline size="20"></svg>
       </button>
     </a>
   </youpez-header-tools>
@@ -38,10 +37,15 @@
                 <div fxFlex="350px" class="mr-4">
                   <div class="app-card app-card--m-0">
                     <div class="app-card__content app-border-b flex justify-between">
-                      <div class="app-productive-heading-03">{{video.title}}</div>
+                      <div class="app-productive-heading-03" style="min-height: 60px">{{video.title}}</div>
                       <ng-container *ngIf="video.seen">
                         <youpez-ibm-icon iconName="checkMarkOutline" class="app-color-success"></youpez-ibm-icon>
                       </ng-container>
+                    </div>
+                    <div class="app-card__content app-border-b">
+                      <button ibmButton="secondary" size="field" class="mr-1 w-full">
+                        Make an Offer!
+                      </button>
                     </div>
                     <div class="app-card__content app-border-b">
                       <div class="app-subtitle mb-1">CATEGORY</div>
@@ -72,16 +76,12 @@
                       <div class="app-body-short-01">{{video.info}}</div>
                     </div>
                   </div>
-                  <div>
-                    <button ibmButton="ghost" size="field" class="mr-1">
-                      Assign to me
-                    </button>
-                  </div>
                 </div>
               </ng-container>
             </div>
           </div>
         </div>
+        <div style="height:300px;"></div>
       </ng-scrollbar>
     </div>
   </div>

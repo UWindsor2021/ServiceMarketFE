@@ -1,47 +1,32 @@
-<div fxFill fxLayout="column">
+<div fxFill fxLayout="column" style="margin: 20px;">
   <div class="app-header app-header--carbon">
     <div class="app-productive-heading-04">Service Provider List</div>
   </div>
-  <dx-data-grid #grid
-                id="gridContainer"
-                [dataSource]="serviceProviderList"
-                keyExpr="ServiceProviderID"
-                [hoverStateEnabled]="true"
-                [showBorders]="true"
-                [selectedRowKeys]="[]">
-    <dxo-filter-row [visible]="true"></dxo-filter-row>
-    <dxo-header-filter [visible]="true"></dxo-header-filter>
-    <dxo-group-panel [visible]="true"></dxo-group-panel>
-    <dxo-scrolling mode="virtual"></dxo-scrolling>
-    <dxo-editing mode="popup"
-                 [allowUpdating]="true"
-                 [allowAdding]="true"
-                 [allowDeleting]="true">
-      <dxo-popup title="Service Provider Info"
-                 [showTitle]="true"
-                 [width]="700"
-                 [height]="525">
-      </dxo-popup>
-      <dxo-form>
-        <dxi-item itemType="group" [colCount]="1" [colSpan]="2">
-          <dxi-item dataField="Name"></dxi-item>
-          <dxi-item dataField="Skill"></dxi-item>
+  <div fxFlex class="relative px-4 pb-4 pt-2">
+    <ng-container *ngIf="!loading">
+      <dx-data-grid #grid
+                    id="gridContainer"
+                    [dataSource]="serviceProviderList"
+                    keyExpr="ServiceProviderID"
+                    [hoverStateEnabled]="true"
+                    [showBorders]="true"
+                    [selectedRowKeys]="[]">
+        <dxo-filter-row [visible]="true"></dxo-filter-row>
+        <dxo-header-filter [visible]="true"></dxo-header-filter>
+        <dxo-group-panel [visible]="true"></dxo-group-panel>
+        <dxo-scrolling mode="virtual"></dxo-scrolling>
 
-          <dxi-item dataField="Description"
-                    editorType="dxTextArea"
-                    [colSpan]="2"
-                    [editorOptions]="{ height: 100 }">
-          </dxi-item>
 
-        </dxi-item>
+        <dxo-selection mode="single"></dxo-selection>
+        <dxi-column dataField="Name" cellTemplate="nameTemplate"></dxi-column>
+        <dxi-column dataField="Skill" [allowEditing]="false"></dxi-column>
+        <dxi-column dataField="Description"></dxi-column>
 
-      </dxo-form>
-    </dxo-editing>
 
-    <dxo-selection mode="single"></dxo-selection>
-    <dxi-column dataField="Name"></dxi-column>
-    <dxi-column dataField="Skill" [allowEditing]="false"></dxi-column>
-    <dxi-column dataField="Description"></dxi-column>
-  </dx-data-grid>
-
+        <div *dxTemplate="let d of 'nameTemplate'">
+          <a href="#">{{d.value }}</a>
+        </div>
+      </dx-data-grid>
+    </ng-container>
+  </div>
 </div>
