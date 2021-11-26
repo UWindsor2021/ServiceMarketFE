@@ -75,13 +75,31 @@ import { StarterApplicationAdvancedComponent } from './starters/application/star
 import { StarterApplicationComplexComponent } from './starters/application/starter-application-complex/starter-application-complex.component'
 import {RequestListComponent} from "./business/service-provider/requests/request-list/request-list.component";
 import {OfferListComponent} from "./business/service-provider/offers/offer-list/offer-list.component";
-import { DevExtremeModule, DxAccordionModule, DxAutocompleteModule, DxButtonModule, DxChartModule, DxCheckBoxModule, DxCircularGaugeModule, DxContextMenuModule, DxDataGridComponent, DxDataGridModule, DxDateBoxModule, DxDropDownBoxModule, DxFormModule, DxListModule, DxLoadIndicatorModule, DxNumberBoxModule, DxPivotGridFieldChooserModule, DxPivotGridModule, DxPopoverModule, DxPopupModule, DxRadioGroupModule, DxResponsiveBoxModule, DxScrollViewModule, DxSelectBoxModule, DxSwitchModule, DxTabsModule, DxTemplateModule, DxTextAreaModule, DxTextBoxModule, DxTooltipModule, DxValidationSummaryModule, DxValidatorModule } from 'devextreme-angular'
+import {
+  DevExtremeModule, DxAccordionModule, DxAutocompleteModule,
+  DxButtonModule, DxChartModule, DxCheckBoxModule, DxCircularGaugeModule,
+  DxContextMenuModule, DxDataGridComponent, DxDataGridModule, DxDateBoxModule,
+  DxDropDownBoxModule, DxFormModule, DxListModule, DxLoadIndicatorModule, DxNumberBoxModule,
+  DxPivotGridFieldChooserModule, DxPivotGridModule, DxPopoverModule, DxPopupModule, DxRadioGroupModule,
+  DxResponsiveBoxModule, DxScrollViewModule, DxSelectBoxModule, DxSwitchModule,
+  DxTabsModule, DxTemplateModule, DxTextAreaModule, DxTextBoxModule, DxTooltipModule,
+  DxValidationSummaryModule, DxValidatorModule
+} from 'devextreme-angular'
 import { ReviewListComponent } from './business/service-provider/review/review-list/review-list.component'
 import { ServiceListComponent } from './business/service-provider/services/service-list/service-list.component'
+import { ServiceSeekerRequestListComponent } from "./business/service-seeker/requests/request-list/request-list.component";
+import { ServiceSeekerOfferListComponent } from "./business/service-seeker/offers/offer-list/offer-list.component";
+import { ServiceProviderListComponent } from "./business/service-provider/service-providers/service-provider-list/service-provider-list.component";
+import { ServiceSeekerProfileComponent } from "./business/service-seeker/profile/service-seeker-profile/service-seeker-profile.component";
+
 
 const ApplicationComponents = [
   ReviewListComponent,
   ServiceListComponent,
+  ServiceSeekerRequestListComponent,
+  ServiceSeekerOfferListComponent,
+  ServiceProviderListComponent,
+  ServiceSeekerProfileComponent
 ];
 
 const DevExtremeModules = [
@@ -93,6 +111,7 @@ const DevExtremeModules = [
   DxButtonModule,
   DxCheckBoxModule,
   DxRadioGroupModule,
+  //DxDataGridComponent,
   DxSelectBoxModule,
   DxPivotGridFieldChooserModule,
   DxPopupModule,

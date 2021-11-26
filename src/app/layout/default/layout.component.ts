@@ -78,14 +78,14 @@ export class LayoutComponent implements OnInit, OnDestroy {
             name: 'analytics',
           },
         },
-        {
-          name: 'Logout',
-          url: '/app/dashboard/crypto',
-          prefix: {
-            type: 'ibm-icon',
-            name: 'analytics',
-          },
-        },
+        //{
+        //  name: 'Logout',
+        //  url: '/app/dashboard/crypto',
+        //  prefix: {
+        //    type: 'ibm-icon',
+        //    name: 'analytics',
+        //  },
+        //},
       ],
     },
     {
@@ -94,7 +94,7 @@ export class LayoutComponent implements OnInit, OnDestroy {
       children: [
         {
           name: 'Profile',
-          url: '/app/user/settings',
+          url: '/app/service-seeker-profile/service-seeker-profile',
           prefix: {
             type: 'ibm-icon',
             name: 'home',
@@ -102,7 +102,7 @@ export class LayoutComponent implements OnInit, OnDestroy {
         },
         {
           name: 'Requests',
-          url: '/app/requests/request-list',
+          url: '/app/service-seeker-requests/request-list',
           prefix: {
             type: 'ibm-icon',
             name: 'activity',
@@ -110,7 +110,7 @@ export class LayoutComponent implements OnInit, OnDestroy {
         },
         {
           name: 'Offers',
-          url: '/app/dashboard/crypto',
+          url: '/app/service-seeker-offers/offer-list',
           prefix: {
             type: 'ibm-icon',
             name: 'analytics',
@@ -118,60 +118,60 @@ export class LayoutComponent implements OnInit, OnDestroy {
         },
         {
           name: 'Service Providers',
-          url: '/app/dashboard/crypto',
+          url: '/app/service-providers/service-provider-list',
           prefix: {
             type: 'ibm-icon',
             name: 'analytics',
           },
         },
-        {
-          name: 'Logout',
-          url: '/app/dashboard/crypto',
-          prefix: {
-            type: 'ibm-icon',
-            name: 'analytics',
-          },
-        },
+        //{
+        //  name: 'Logout',
+        //  url: '/app/dashboard/crypto',
+        //  prefix: {
+        //    type: 'ibm-icon',
+        //    name: 'analytics',
+        //  },
+        //},
       ],
     },
-    {
-      groupName: 'Administrator',
-      opened: true,
-      children: [
-        {
-          name: 'Account',
-          url: '/app/dashboard/default',
-          prefix: {
-            type: 'ibm-icon',
-            name: 'home',
-          },
-        },
-        {
-          name: 'Service Providers',
-          url: '/app/dashboard/analytics',
-          prefix: {
-            type: 'ibm-icon',
-            name: 'activity',
-          },
-        },
-        {
-          name: 'Service Seekers',
-          url: '/app/dashboard/crypto',
-          prefix: {
-            type: 'ibm-icon',
-            name: 'analytics',
-          },
-        },
-        {
-          name: 'Logout',
-          url: '/app/dashboard/crypto',
-          prefix: {
-            type: 'ibm-icon',
-            name: 'analytics',
-          },
-        },
-      ],
-    }
+    //{
+    //  groupName: 'Administrator',
+    //  opened: true,
+    //  children: [
+    //    {
+    //      name: 'Account',
+    //      url: '/app/dashboard/default',
+    //      prefix: {
+    //        type: 'ibm-icon',
+    //        name: 'home',
+    //      },
+    //    },
+    //    {
+    //      name: 'Service Providers',
+    //      url: '/app/dashboard/analytics',
+    //      prefix: {
+    //        type: 'ibm-icon',
+    //        name: 'activity',
+    //      },
+    //    },
+    //    {
+    //      name: 'Service Seekers',
+    //      url: '/app/dashboard/crypto',
+    //      prefix: {
+    //        type: 'ibm-icon',
+    //        name: 'analytics',
+    //      },
+    //    },
+    //    {
+    //      name: 'Logout',
+    //      url: '/app/dashboard/crypto',
+    //      prefix: {
+    //        type: 'ibm-icon',
+    //        name: 'analytics',
+    //      },
+    //    },
+    //  ],
+    //}
   ];
 
   /* SM-Sample */

@@ -63,6 +63,11 @@ import {RequestListComponent} from "./business/service-provider/requests/request
 import {OfferListComponent} from "./business/service-provider/offers/offer-list/offer-list.component";
 import { ReviewListComponent } from "./business/service-provider/review/review-list/review-list.component";
 import { ServiceListComponent } from "./business/service-provider/services/service-list/service-list.component";
+import { ServiceSeekerRequestListComponent } from "./business/service-seeker/requests/request-list/request-list.component";
+import { ServiceSeekerOfferListComponent } from "./business/service-seeker/offers/offer-list/offer-list.component";
+import { ServiceProviderListComponent } from "./business/service-provider/service-providers/service-provider-list/service-provider-list.component";
+import { ServiceSeekerProfileComponent } from "./business/service-seeker/profile/service-seeker-profile/service-seeker-profile.component";
+
 
 const starterPages = [
   {
@@ -507,6 +512,22 @@ const routeForPages = [
     ]
   },
   {
+    path: 'service-seeker-requests',
+    component: ServiceSeekerRequestListComponent,
+    data: {
+      breadcrumb: 'Service Seeker Requests'
+    },
+    children: [
+      {
+        path: 'request-list',
+        component: ServiceSeekerRequestListComponent,
+        data: {
+          breadcrumb: 'Service Seeker Request List'
+        },
+      },
+    ]
+  },
+  {
     path: 'offers',
     component: OfferListComponent,
     data: {
@@ -518,6 +539,52 @@ const routeForPages = [
         component: OfferListComponent,
         data: {
           breadcrumb: 'Offer List'
+        },
+      },
+    ]
+  }, {
+    path: 'service-seeker-offers',
+    component: ServiceSeekerOfferListComponent,
+    data: {
+      breadcrumb: 'Offers'
+    },
+    children: [
+      {
+        path: 'offer-list',
+        component: ServiceSeekerOfferListComponent,
+        data: {
+          breadcrumb: 'Offer List'
+        },
+      },
+    ]
+  },
+  {
+    path: 'service-providers',
+    component: ServiceProviderListComponent,
+    data: {
+      breadcrumb: 'Service Providers'
+    },
+    children: [
+      {
+        path: 'service-provider-list',
+        component: ServiceProviderListComponent,
+        data: {
+          breadcrumb: 'Service Provider List'
+        },
+      },
+    ]
+  }, {
+    path: 'service-seeker-profile',
+    component: ServiceSeekerProfileComponent,
+    data: {
+      breadcrumb: 'Service Seeker Profile'
+    },
+    children: [
+      {
+        path: 'service-seeker-profile',
+        component: ServiceSeekerProfileComponent,
+        data: {
+          breadcrumb: 'Service Seeker Profile'
         },
       },
     ]
