@@ -176,6 +176,7 @@ import {AppHeaderToolsComponent} from './layout/app-header/app-header-tools/app-
 import {AppThemeSettingsComponent} from './layout/app-theme-settings/app-theme-settings.component'
 import {AppLayoutHeaderComponent} from './layout/app-layout-header/app-layout-header.component'
 import {AppSearchComponent} from './components/app-search/app-search.component'
+import {AppModalComponent} from './components/app-modal/app-modal.component'
 import {AppTasksComponent} from './components/app-tasks/app-tasks.component'
 
 import {InputTypeAdvancedPipe} from "./pipes/input-type-advanced.pipe"
@@ -371,6 +372,7 @@ const Components = [
   AppThemeSettingsComponent,
   AppLayoutHeaderComponent,
   AppSearchComponent,
+  AppModalComponent,
   AppTasksComponent,
   AppLayoutDividedComponent,
   AppLayoutDividedAltComponent,

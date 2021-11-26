@@ -51,7 +51,25 @@
                         [colSpan]="2"
                         [editorOptions]="{ height: 100 }">
               </dxi-item>
+              <dxi-item dataField="Lat"></dxi-item>
+              <dxi-item dataField="Lng"></dxi-item>
 
+              <dxi-item>
+                <dx-map provider="bing"
+                        [zoom]="11"
+                        [height]="150"
+                        width="150"
+                        [controls]="false"
+                        [markerIconSrc]="'/assets/map-marker.png'"
+                        [markers]="[{
+                          location: [42.30401652637586,-83.0738203528894],
+                          tooltip: {
+                            isShown: false,
+                            text: 'Test'
+                          }
+                        }]">
+                </dx-map>
+              </dxi-item>
 
             </dxi-item>
 
@@ -77,7 +95,24 @@
         </dxi-column>
         <dxi-column dataField="RequestVideoLink"></dxi-column>
         <dxi-column dataField="Description"></dxi-column>
-
+        <dxi-column dataField="Lat"></dxi-column>
+        <dxi-column dataField="Lng"></dxi-column>
+        <dxi-column>
+          <dx-map provider="bing"
+                  [zoom]="11"
+                  [height]="150"
+                  width="150"
+                  [controls]="false"
+                  [markerIconSrc]="'/assets/map-marker.png'"
+                  [markers]="[{
+                          location: [42.30401652637586,-83.0738203528894],
+                          tooltip: {
+                            isShown: false,
+                            text: 'Test'
+                          }
+                        }]">
+          </dx-map>
+        </dxi-column>
       </dx-data-grid>
     </ng-container>
   </div>

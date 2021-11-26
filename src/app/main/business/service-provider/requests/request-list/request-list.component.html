@@ -43,7 +43,7 @@
                       </ng-container>
                     </div>
                     <div class="app-card__content app-border-b">
-                      <button ibmButton="secondary" size="field" class="mr-1 w-full">
+                      <button (click)="onItemClick({key:'offer', id: video.id})" ibmButton="secondary" size="field" class="mr-1 w-full">
                         Make an Offer!
                       </button>
                     </div>
@@ -86,3 +86,44 @@
     </div>
   </div>
 </div>
+<ng-container *ngIf="makeAnOffer">
+  <youpez-modal (close)="onOfferClose($event)">
+    <div fxFill fxLayout="column">
+      <div class="app-header app-header--carbon">
+        <div class="app-productive-heading-05">Make an Offer!</div>
+      </div>
+      <div fxFlex class="relative px-4 pb-4 pt-2">
+        <ng-container>
+          <div style="height:40px;">
+            <h3>{{videos[currentVideoId].title}}</h3>
+          </div>
+          <dx-form id="form" [formData]="offerInfo">
+            <dxi-item itemType="group" cssClass="first-group" [colCount]="2">
+              <dxi-item>
+                <dx-map provider="bing"
+                        [zoom]="11"
+                        [height]="150"
+                        width="100%"
+                        [controls]="false"
+                        [markerIconSrc]="'/assets/map-marker.png'"
+                        [markers]="[{
+                          location: videos[currentVideoId].location,
+                          tooltip: {
+                            isShown: false,
+                            text: videos[currentVideoId].title
+                          }
+                        }]">
+                </dx-map>
+              </dxi-item>
+              <dxi-item itemType="group">
+                <dxi-item dataField="offerPrice" [readOnly]="offerInfo.volunteer"></dxi-item>
+                <dxi-item dataField="volunteer" [editorOptions]="{onValueChanged:onVolunteer}" editorType="dxCheckBox"></dxi-item>
+              </dxi-item>
+            </dxi-item>
+          </dx-form>
+        </ng-container>
+      </div>
+    </div>
+
+  </youpez-modal>
+</ng-container>

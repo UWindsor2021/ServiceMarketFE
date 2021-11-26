@@ -67,6 +67,7 @@ import { ServiceSeekerRequestListComponent } from "./business/service-seeker/req
 import { ServiceSeekerOfferListComponent } from "./business/service-seeker/offers/offer-list/offer-list.component";
 import { ServiceProviderListComponent } from "./business/service-provider/service-providers/service-provider-list/service-provider-list.component";
 import { ServiceSeekerProfileComponent } from "./business/service-seeker/profile/service-seeker-profile/service-seeker-profile.component";
+import { ServiceProviderProfileComponent } from './business/service-seeker/profile/profile/profile.component'
 
 
 const starterPages = [
@@ -526,6 +527,10 @@ const routeForPages = [
         },
       },
     ]
+  },
+  {
+    path: 'service-seeker/show-provider/:id',
+    component: ServiceProviderProfileComponent,
   },
   {
     path: 'offers',

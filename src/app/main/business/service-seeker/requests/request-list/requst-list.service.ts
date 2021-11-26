@@ -12,6 +12,8 @@ export class RequestInfo {
   RequestVideoLink?: string;
   Description: string;
   RequestCategoryID: number;
+  Lat?: string;
+  Lng?: string;
 }
 export class RequestCategory {
   ID: number;
@@ -50,8 +52,9 @@ const requests: RequestInfo[] = [
     CloseDate: new Date("Fri Dec 08 2019 07:44:57"),
     RequestVideoLink: "https://www.youtube.com/watch?v=xk4_1vDrzzo",
     Description: "My bathroom is very old and I want to change all its pipeline so I need a professional plumber",
-    RequestCategoryID: 1
-
+    RequestCategoryID: 1,
+    Lat: '42.30401652637586',
+    Lng: '-83.0738203528894',
   },
   {
     RequestID: 2,
@@ -63,7 +66,9 @@ const requests: RequestInfo[] = [
     CloseDate: new Date("Fri Dec 07 2019 07:44:57"),
     RequestVideoLink: "https://www.youtube.com/watch?v=RRubcjpTkks",
     Description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id tincidunt dui. Maecenas elementum eros id imperdiet molestie. Vestibulum semper tempus turpis.",
-    RequestCategoryID: 2
+    RequestCategoryID: 2,
+    Lat: '42.30401652637586',
+    Lng: '-83.0738203528894',
   },
   {
     RequestID: 3,
@@ -75,7 +80,9 @@ const requests: RequestInfo[] = [
     CloseDate: new Date("Fri Dec 02 2019 07:44:57"),
     RequestVideoLink: "--",
     Description: "I need to paint all my house. I am searching for a painter who can paint my house with reasonable price.",
-    RequestCategoryID: 3
+    RequestCategoryID: 3,
+    Lat: '42.30401652637586',
+    Lng: '-83.0738203528894',
   },
   {
     RequestID: 4,
@@ -87,7 +94,9 @@ const requests: RequestInfo[] = [
     CloseDate: new Date("Fri Dec 02 2019 07:44:57"),
     RequestVideoLink: "https://www.youtube.com/watch?v=GoXwIVyNvX0",
     Description: "I want to rent a car for 2 days",
-    RequestCategoryID: 4
+    RequestCategoryID: 4,
+    Lat: '42.30401652637586',
+    Lng: '-83.0738203528894',
   },
   {
     RequestID: 5,
@@ -99,7 +108,9 @@ const requests: RequestInfo[] = [
     CloseDate: new Date("Fri Dec 02 2019 07:44:57"),
     RequestVideoLink: "https://www.youtube.com/watch?v=2dZiMBwX_5Q",
     Description: "My bathroom is very old and I want to change all its pipeline so I need a professional plumber",
-    RequestCategoryID: 4
+    RequestCategoryID: 4,
+    Lat: '42.30401652637586',
+    Lng: '-83.0738203528894',
   }
 ];
 

@@ -23,7 +23,8 @@ import {UserBillingComponent} from './user/user-billing/user-billing.component'
 import {UserCreditcardComponent} from './user/user-creditcard/user-creditcard.component'
 import {UserTransactionsComponent} from './user/user-transactions/user-transactions.component'
 import {TimelineComponent} from './timeline/timeline.component'
-import {ProfileComponent} from './profile/profile.component'
+import { ProfileComponent } from './profile/profile.component'
+import { ServiceProviderProfileComponent } from './business/service-seeker/profile/profile/profile.component'
 import {PricingSimpleComponent} from './pricing/pricing-simple/pricing-simple.component'
 import {PricingModernComponent} from './pricing/pricing-modern/pricing-modern.component'
 import {PricingTableComponent} from './pricing/pricing-table/pricing-table.component'
@@ -159,6 +160,7 @@ const DevExtremeModules = [
 
     TimelineComponent,
     ProfileComponent,
+    ServiceProviderProfileComponent,
     PricingSimpleComponent,
     PricingModernComponent,
     PricingTableComponent,

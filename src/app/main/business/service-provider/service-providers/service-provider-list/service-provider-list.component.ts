@@ -28,6 +28,9 @@ export class ServiceProviderListComponent implements OnInit {
 
   }
 
+  log(a) {
+    console.log(a);
+  }
 
 
 

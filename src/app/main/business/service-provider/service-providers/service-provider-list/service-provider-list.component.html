@@ -24,7 +24,7 @@
 
 
         <div *dxTemplate="let d of 'nameTemplate'">
-          <a href="#">{{d.value }}</a>
+          <a [routerLink]="['/app/service-seeker/show-provider', d.data.ServiceProviderID]">{{d.value }}</a>
         </div>
       </dx-data-grid>
     </ng-container>
